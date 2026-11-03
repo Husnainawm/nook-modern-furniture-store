@@ -34,8 +34,8 @@ const Animationsec = () => {
 
   return (
     <section>
-        <div className="sticky top-0 h-screen w-full overflow-hidden ">
-            <div className='relative flex flex-col gap-8 items-center top-64 mx-auto text-center w-[60%]'>
+        <div className="sticky top-0 h-116 md:h-screen w-full overflow-hidden ">
+            <div className='relative flex flex-col gap-8 items-center top-28 md:top-64 mx-auto text-center w-[60%]'>
             <p className='text-sm'>GET CREATIVE WITH US</p>
             <h1 className='text-4xl md:text-6xl lg:text-9xl font-medium'>
                 Check over 10,000 Inspirations

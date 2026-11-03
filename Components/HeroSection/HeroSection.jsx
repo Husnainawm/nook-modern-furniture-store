@@ -48,7 +48,7 @@ const HeroSection = () => {
   }, [current])
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative md:h-auto w-full overflow-hidden">
       <MouseHover
       onDirection={handleDirection}
       >
@@ -59,8 +59,12 @@ const HeroSection = () => {
         transition={{ duration: 0.8, ease: 'easeInOut' }}
       >
         {Data.map((elem) => (
-          <div key={elem.idx} className="relative w-full shrink-0">
-            <img src={elem.pic} className="w-full block" />
+          <div key={elem.idx}  className="relative w-full shrink-0 h-[70dvh] min-h-[420px] md:h-auto md:min-h-0">
+            <img
+      src={elem.pic}
+      alt={elem.title}
+      className="block w-full h-full object-cover md:h-auto"
+    />
 
             {/* Text overlay */}
             <div className="absolute bottom-4 md:bottom-20 flex flex-col justify-center gap-2 md:gap-5 pl-4 md:pl-17 text-white">
