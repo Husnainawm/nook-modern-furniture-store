@@ -21,7 +21,7 @@ export default function SignInPage() {
 
       {/* Form */}
       <main className="flex flex-1 items-center justify-center px-4 pb-24">
-        <div className="w-full max-w-[380px]">
+        <div className="w-full max-w-95">
           <h2 className="text-2xl font-semibold">Sign in</h2>
           <p className="mt-1 text-sm text-neutral-500">
             Sign in or create an account
@@ -30,7 +30,7 @@ export default function SignInPage() {
           {/* Shop button */}
           <button
             type="button"
-            className="mt-5 h-[50px] w-full rounded-lg bg-[#5433eb] text-base font-semibold text-white transition hover:bg-[#4526d1]"
+            className="mt-5 h-12.5 w-full rounded-lg bg-[#5433eb] text-base font-semibold text-white transition hover:bg-[#4526d1]"
           >
             Continue with shop
           </button>
@@ -44,7 +44,7 @@ export default function SignInPage() {
 
           {/* Email form */}
           <form onSubmit={handleSubmit}>
-            <div className="flex h-[50px] items-center rounded-lg border border-neutral-300 px-3 focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-600">
+            <div className="flex h-12.5 items-center rounded-lg border border-neutral-300 px-3 focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-600">
               <input
                 type="email"
                 required
