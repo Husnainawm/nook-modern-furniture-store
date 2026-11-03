@@ -3,6 +3,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import NavbarOne from '@/Components/Navbar/Navbarfiles/NavbarOne'
 import NavbarTwo from './Navbarfiles/NavarbarTwo'
+import useMediaQuery from './Navbarfiles/useMediaQuery'
+
+
+
 const Navbar = () => {
   const [inView, setInView] = useState(true)
   const [open, setOpen] = useState(false)
@@ -35,16 +39,19 @@ const Navbar = () => {
   return () => window.removeEventListener('scroll', onScroll)
 }, [open])
 
+const isSmall = useMediaQuery("(max-width: 767px)"); // md se neeche
+
+
 
   return (
     <>
       {/* NavbarOne: always fixed */}
-      <div className="fixed left-0 top-0 z-55 h-20 w-full shadow-xl/3 bg-white">
-        <NavbarOne
-          showButton={!inView && !open}
-          onButtonClick={() => setOpen(true)}
-        />
-      </div>
+     <div className="fixed left-0 top-0 z-55 h-20 w-full shadow-xl/3 bg-white">
+  <NavbarOne
+    showButton={isSmall || (!inView && !open)}
+    onButtonClick={() => setOpen(!open)}
+  />
+</div>
 
       {/* NavbarTwo in normal flow (this is what we watch) */}
       <div ref={ref} className="relative z-50 pt-20">
@@ -72,7 +79,7 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -30, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed left-0 top-20 z-40 w-full bg-white shadow-md"
+            className="fixed left-0 top-20 z-40 md:w-full bg-white shadow-md"
           >
             <NavbarTwo />
           </motion.div>

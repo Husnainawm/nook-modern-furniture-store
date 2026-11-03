@@ -87,9 +87,9 @@ useEffect(() => {
 
 
   return (
-    <div>
-      <nav className="hidden w-full justify-center bg-white lg:flex">
-      <ul className="flex items-center gap-10 py-3">
+    <div className='w-auto'>
+      <div className="w-90 lg:w-full justify-items-start px-6 lg:justify-center bg-white lg:flex">
+      <ul className="flex flex-col md:flex-row items-center gap-10 py-3">
         {links.map((l) => (
           <li
             key={l.label}
@@ -104,7 +104,7 @@ useEffect(() => {
         ))}
       </ul>
 
-    </nav>
+    </div>
 
 <AnimatePresence>
       {activeMenu && (

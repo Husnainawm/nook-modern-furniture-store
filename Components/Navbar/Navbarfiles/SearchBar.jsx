@@ -26,7 +26,7 @@ export default function SearchBar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-      className="w-full md:overflow-hidden bg-white text-neutral-900"
+      className="w-full overflow-auto md:overflow-hidden bg-white text-neutral-900"
     >
       <div className=" px-10 md:px-80 py-12 h-lvh">
       <h2 className="text-center font-sans mb-2 md:mb-5 text md:text-[21px]">Trending searches</h2>
