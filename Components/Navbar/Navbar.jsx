@@ -41,7 +41,22 @@ const Navbar = () => {
 
 const isSmall = useMediaQuery("(max-width: 767px)"); // md se neeche
 
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setInView(entry.isIntersecting)
+      if (entry.isIntersecting && !isSmall) setOpen(false)
+    },
+    { rootMargin: '-80px 0px 0px 0px' }
+  )
+  if (ref.current) observer.observe(ref.current)
+  return () => observer.disconnect()
+}, [isSmall])
 
+// slide band ho to backdrop/menu state bhi reset ho
+useEffect(() => {
+  if (!open) setMenuOpen(false)
+}, [open])
 
   return (
     <>
@@ -55,7 +70,7 @@ const isSmall = useMediaQuery("(max-width: 767px)"); // md se neeche
 
       {/* NavbarTwo in normal flow (this is what we watch) */}
       <div ref={ref} className="relative z-50 pt-20">
-        <NavbarTwo onMenuChange={setMenuOpen} />
+        {!isSmall && <NavbarTwo onMenuChange={setMenuOpen} />}
 
       </div>
       <AnimatePresence>
@@ -79,9 +94,9 @@ const isSmall = useMediaQuery("(max-width: 767px)"); // md se neeche
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -30, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed left-0 top-20 z-40 md:w-full bg-white shadow-md"
+      className="fixed left-0 top-20 z-50 w-full bg-white shadow-md max-h-[calc(100dvh-5rem)] overflow-y-auto"
           >
-            <NavbarTwo />
+      <NavbarTwo onMenuChange={setMenuOpen} />
           </motion.div>
         )}
       </AnimatePresence>

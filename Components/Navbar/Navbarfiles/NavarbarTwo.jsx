@@ -87,7 +87,7 @@ useEffect(() => {
 
 
   return (
-    <div className='w-auto'>
+    <div className='w-auto md:flex'>
       <div className="w-90 lg:w-full justify-items-start px-6 lg:justify-center bg-white lg:flex">
       <ul className="flex flex-col md:flex-row items-center gap-10 py-3">
         {links.map((l) => (
