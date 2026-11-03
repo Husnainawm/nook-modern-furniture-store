@@ -56,7 +56,7 @@ const AnimationProducer = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
-      className="mx-auto mb-180 flex max-w-2xl flex-col items-center px-6 pt-0 md:pt-16 text-center"
+      className="mx-auto mb-160 md:mb-180 flex max-w-2xl flex-col items-center px-6 pt-0 md:pt-16 text-center"
     >
       {/* Small label */}
       <motion.p
