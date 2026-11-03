@@ -40,7 +40,7 @@ const NavbarOne = ({showButton,onButtonClick}) => {
           </motion.button>
         )}
       <Link href="/#" className="shrink-0"> 
-        <img src={LOGO_URL} alt="Nook" className="h-9 w-auto" />          
+        <img src={LOGO_URL} alt="Nook" className="h-9 w-24 lg:w-auto" />          
         </Link>
       </div>
 }
@@ -64,7 +64,7 @@ const NavbarOne = ({showButton,onButtonClick}) => {
           <input
             type="text"
             placeholder="What can we help you find?"
-            className="w-full bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
+            className="w-full bg-transparent text-neutral-800 outline-none placeholder:text-neutral-400"
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
           />
@@ -77,8 +77,15 @@ const NavbarOne = ({showButton,onButtonClick}) => {
         {!searchOpen  &&
         <div className="flex shrink-0 items-center gap-5">
           {/* Mobile search icon */}
-          <button className="md:hidden" aria-label="Search">
-            <Search size={22} />
+          <button
+          onClick={()=>setSearchOpen(true)}
+          className="md:hidden" aria-label="Search">
+            <Search
+            
+            
+            size={22} />
+            
+            
             
           </button>
 

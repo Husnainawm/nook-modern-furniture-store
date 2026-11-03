@@ -69,7 +69,7 @@ const AnimationProducer = () => {
       {/* Big heading */}
       <motion.h2
         variants={item}
-        className="mt-6 text-8xl font-normal leading-none text-neutral-900 sm:text-7xl lg:text-7xl"
+        className="mt-6 font-normal leading-none text-neutral-900 text-3xl sm:text-5xl lg:text-7xl"
       >
         Pumpkin Sofa
       </motion.h2>

@@ -37,7 +37,7 @@ const Animationsec = () => {
         <div className="sticky top-0 h-screen w-full overflow-hidden ">
             <div className='relative flex flex-col gap-8 items-center top-64 mx-auto text-center w-[60%]'>
             <p className='text-sm'>GET CREATIVE WITH US</p>
-            <h1 className='text-9xl font-medium'>
+            <h1 className='text-4xl md:text-6xl lg:text-9xl font-medium'>
                 Check over 10,000 Inspirations
             </h1>
             <motion.a
@@ -92,7 +92,7 @@ const Animationsec = () => {
                     transition={{ type: "spring", stiffness: 100, damping: 15 }}
                     
                             variants={item}
-                            className="relative -right-280 w-[65%]"
+                            className="relative -right-24 md:-right-70 lg:-right-280 w-[65%]"
                           >
                             <img src='/Theme Images/Animation images/00rwz_W.webp' />
                           </motion.div>

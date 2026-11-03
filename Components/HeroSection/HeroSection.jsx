@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from 'motion/react'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import MouseHover from './MouseHover'
 
 const Data =[
@@ -63,11 +63,11 @@ const HeroSection = () => {
             <img src={elem.pic} className="w-full block" />
 
             {/* Text overlay */}
-            <div className="absolute bottom-20 flex flex-col justify-center gap-5 pl-17 text-white">
+            <div className="absolute bottom-4 md:bottom-20 flex flex-col justify-center gap-2 md:gap-5 pl-4 md:pl-17 text-white">
               <p className="text-sm">{elem.uppara}</p>
-              <h2 className="text-6xl max-w-90 font-sans">{elem.title}</h2>
-              <div className="flex gap-5">
-                <a className="underline underline-offset-10" href="#">{elem.link}</a>
+              <h2 className="text-xl md:text-6xl max-w-90 font-sans">{elem.title}</h2>
+              <div className="flex gap-2 md:gap-5">
+                <a className="underline underline-offset-10 text-sm sm:text-" href="#">{elem.link}</a>
                 {elem.Shop && (
                   <a className="underline underline-offset-10" href="#">{elem.Shop}</a>
                 )}
@@ -78,7 +78,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Dots */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-3 z-20">
+      <div className="hidden  absolute bottom-5 left-1/2 -translate-x-1/2 md:flex items-center gap-3 z-20">
  {Data.map((_, i) => (
     <button
       key={i}

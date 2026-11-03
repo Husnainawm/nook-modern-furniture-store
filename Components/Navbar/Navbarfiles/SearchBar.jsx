@@ -26,17 +26,17 @@ export default function SearchBar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-      className="w-full overflow-hidden bg-white text-neutral-900"
+      className="w-full md:overflow-hidden bg-white text-neutral-900"
     >
-      <div className="px-80 py-12 h-lvh">
-      <h2 className="text-center font-sans mb-5 text-[21px]">Trending searches</h2>
+      <div className=" px-10 md:px-80 py-12 h-lvh">
+      <h2 className="text-center font-sans mb-2 md:mb-5 text md:text-[21px]">Trending searches</h2>
 
-      <div className="flex">
+      <div className="flex flex-col gap-3 md:flex-row">
         {/* Left: popular products */}
         <div className="flex-1">
           <h3 className="mb-3 font-sans text-[17px] ">Popular products</h3>
           <motion.div
-          className="grid grid-cols-2 w-190 gap-x-0 gap-y-7">
+          className="grid grid-cols-1 md:grid-cols-2 w-190 gap-x-0 gap-y-7">
             {products.map((p) => (
               <motion.a 
               initial={{ opacity: 0 , y:20}}
@@ -62,7 +62,7 @@ export default function SearchBar() {
         {/* Right: link lists */}
         <div
         
-        className="w-117.5 border-l px-10 border-neutral-200">
+        className="w-50 md:w-117.5 border-l px-10 border-neutral-200">
           {sections.map((s, i) => (
             <div
               key={s.title}
