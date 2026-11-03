@@ -35,7 +35,7 @@ const FeaturedGrid = () => {
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0.3 }}
     transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2}}
-    className="w-full bg-white px-6 py-8">
+    className="w-full bg-white px-6 py-4 md:py-8">
       <div className="mx-auto grid max-w-[1740px] grid-cols-1 gap-2 lg:grid-cols-[2fr_1fr]">
         {/* Big card (left) */}
         <a

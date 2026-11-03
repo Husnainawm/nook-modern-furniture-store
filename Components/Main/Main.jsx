@@ -7,7 +7,7 @@ import DesignOne from './Design/DesignOne'
 
 const Main = () => {
   return (
-    <div className='pt-20'>
+    <div className='pt-10 md:pt-20'>
          <ShopByDepartment/>
          <FeaturedGrid />
          <AnimationProducer/>

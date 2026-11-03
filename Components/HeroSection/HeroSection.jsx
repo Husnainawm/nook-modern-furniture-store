@@ -59,7 +59,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8, ease: 'easeInOut' }}
       >
         {Data.map((elem) => (
-          <div key={elem.idx}  className="relative w-full shrink-0 h-[70dvh] min-h-[420px] md:h-auto md:min-h-0">
+          <div key={elem.idx}  className="relative w-full shrink-0 h-[60dvh] min-h-90 md:h-auto md:min-h-0">
             <img
       src={elem.pic}
       alt={elem.title}
@@ -67,7 +67,7 @@ const HeroSection = () => {
     />
 
             {/* Text overlay */}
-            <div className="absolute bottom-4 md:bottom-20 flex flex-col justify-center gap-2 md:gap-5 pl-4 md:pl-17 text-white">
+            <div className="absolute bottom-5 md:bottom-20 flex flex-col justify-center gap-2 md:gap-5 pl-4 md:pl-17 text-white">
               <p className="text-sm">{elem.uppara}</p>
               <h2 className="text-xl md:text-6xl max-w-90 font-sans">{elem.title}</h2>
               <div className="flex gap-2 md:gap-5">
@@ -82,7 +82,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Dots */}
-      <div className="hidden  absolute bottom-5 left-1/2 -translate-x-1/2 md:flex items-center gap-3 z-20">
+      <div className="hidden absolute bottom-5 left-1/2 -translate-x-1/2 md:flex items-center gap-3 z-20">
  {Data.map((_, i) => (
     <button
       key={i}

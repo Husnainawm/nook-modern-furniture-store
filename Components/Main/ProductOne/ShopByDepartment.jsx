@@ -31,7 +31,7 @@ const item = {
 
 const ShopByDepartment = () => {
   return (
-    <section className="w-full bg-white py-8">
+    <section className="w-full bg-white py-4 md:py-8">
       <motion.h2
       initial={{opacity:0, y:10}}
       whileInView={{opacity:1, y:0}}
@@ -46,14 +46,14 @@ const ShopByDepartment = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="mx-auto mt-7 grid max-w-7xl grid-cols-2 gap-y-10 px-6 sm:grid-cols-3 lg:grid-cols-6"
+        className="mx-auto mt-2 md:mt-5 grid max-w-7xl grid-cols-2 gap-y-3 md:gap-y-10 px-6 sm:grid-cols-3 lg:grid-cols-6"
       >
         {Departments.map((elem) => (
           <motion.a
             key={elem.idx}
             href="#"
             variants={item}
-            className="group flex flex-col items-center gap-2"
+            className="group flex flex-col items-center gap-0"
           >
             <div className="flex h-40 w-full items-center justify-center">
               {elem.pic && (
