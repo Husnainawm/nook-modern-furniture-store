@@ -141,6 +141,9 @@ const NavbarOne = ({ showButton, onButtonClick }) => {
             {/* Sign up button -> /account/register */}
             <Link
               href="/acount/register"
+              
+              onClick={() => setSign(false)} 
+
               className="mt-5 flex h-12 w-full items-center justify-center rounded-xl bg-[#5433eb] text-base font-semibold text-white hover:bg-[#4526d1]"
             >
               Sign in with shop
