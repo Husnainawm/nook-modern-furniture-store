@@ -28,7 +28,7 @@ export default function Providers({ children }) {
     >
       <div
         ref={coverRef}
-        className="fixed inset-0 bg-black z-50 pointer-events-none"
+        className="fixed inset-0 bg-black z-54 pointer-events-none"
         style={{ transform: "translateX(100%)" }}
       />
       {children}
